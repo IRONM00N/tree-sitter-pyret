@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "pyret",
+      "camelcase": "Pyret",
+      "title": "Pyret",
+      "scope": "source.pyret",
+      "file-types": [
+        "arr"
+      ],
+      "injection-regex": "^pyret$",
+      "class-name": "TreeSitterPyret"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "AGPL-3.0",
+    "description": "Pyret grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "ironmoon",
+        "email": "me@ironmoon.dev"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/IRONM00N/tree-sitter-pyret"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}

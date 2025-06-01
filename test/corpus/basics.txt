@@ -1,0 +1,194 @@
+===========
+File Import
+===========
+
+include file("utils.arr")
+
+provide:
+  data Node,
+end
+
+--------
+
+(source_file (import_stmt (import_source (import_special (name) (string
+(string_content) (string_content) (string_content) (string_content)
+(string_content) (string_content) (string_content) (string_content)
+(string_content))))) (provide_stmt (provide_block (provide_spec
+(provide_data_spec (data_name_spec (module_ref (name))))))))
+
+
+========
+Function
+========
+
+import file as F
+
+
+fun foo(bar):
+end
+
+---
+
+(source_file (import_stmt (import_source (import_name (name))) (name)) 
+  (block (fun_expr (name) (fun_header (args (binding (name_binding (name))))))))
+
+
+=====
+Type
+=====
+
+type Foo<A, B, C> = (A -> Bar<A, B, C>)
+
+---
+
+(source_file
+  (block
+      (type_expr
+        (name)
+        (ty_params
+          (comma_names
+            (name)
+            (name)
+            (name)))
+        (ann
+          (arrow_ann
+            (arrow_ann_args
+              (comma_anns
+                (ann
+                  (name_ann
+                    (name)))))
+            (ann
+              (app_ann
+                (name_ann
+                  (name))
+                (comma_anns
+                  (ann
+                    (name_ann
+                      (name)))
+                  (ann
+                    (name_ann
+                      (name)))
+                  (ann
+                    (name_ann
+                      (name)))))))))))
+
+====
+Data
+====
+
+data Foo:
+| bar
+| baz(arg)
+end
+
+---
+
+(source_file
+  (block
+      (data_expr
+        (name)
+        (data_variant
+          (name))
+        (data_variant
+          (variant_constructor
+            (name)
+            (variant_members
+              (variant_member
+                (binding
+                  (name_binding
+                    (name))))))))))
+
+=====
+Cases
+=====
+cases (List) deps:
+| empty => none
+| link(id, rst) => some 1
+end
+
+
+---
+
+(source_file
+  (block
+    (check_test
+      (cases_expr
+        (ann
+          (name_ann
+            (name)))
+        (id_expr
+          (id_expr))
+            (cases_branch
+              (name)
+              (block
+                (check_test
+                  (id_expr
+                    (id_expr)))))
+            (cases_branch
+              (name)
+              (cases_args
+                (cases_binding
+                  (binding
+                    (name_binding
+                      (name))))
+                (cases_binding
+                  (binding
+                    (name_binding
+                      (name)))))
+              (block
+                (check_test
+                  (id_expr
+                    (id_expr)))
+                  (check_test
+                    (prim_expr
+                      (num_expr
+                        (number))))))))))
+
+================
+List Constructor
+================
+[list: 1, 2, 3, 4]
+
+---
+
+;; TODO: shouldn't have top level check_test
+
+(source_file
+  (block
+    (check_test
+      (construct_expr
+        (id_expr
+          (id_expr))
+        (prim_expr
+          (num_expr
+            (number)))
+        (prim_expr
+          (num_expr
+            (number)))
+        (prim_expr
+          (num_expr
+            (number)))
+        (prim_expr
+          (num_expr
+            (number)))))))
+
+
+=============
+Block Comment
+=============
+
+5 #| comment |# + 5
+
+---
+
+(source_file
+  (block
+    (check_test
+      (prim_expr
+        (num_expr
+          (number)))
+      (block_comment)
+      (binop)
+      (prim_expr
+        (num_expr
+          (number))))))

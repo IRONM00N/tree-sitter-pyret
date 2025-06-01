@@ -1,0 +1,8071 @@
+[
+  {
+    "type": "ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "app_ann",
+          "named": true
+        },
+        {
+          "type": "arrow_ann",
+          "named": true
+        },
+        {
+          "type": "dot_ann",
+          "named": true
+        },
+        {
+          "type": "name_ann",
+          "named": true
+        },
+        {
+          "type": "pred_ann",
+          "named": true
+        },
+        {
+          "type": "record_ann",
+          "named": true
+        },
+        {
+          "type": "tuple_ann",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ann_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "app_ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comma_anns",
+          "named": true
+        },
+        {
+          "type": "dot_ann",
+          "named": true
+        },
+        {
+          "type": "name_ann",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "app_args",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "comma_binops",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "app_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_args",
+          "named": true
+        },
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "args",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arrow_ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "arrow_ann_args",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arrow_ann_args",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "comma_ann_field",
+          "named": true
+        },
+        {
+          "type": "comma_anns",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assign_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "binding",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name_binding",
+          "named": true
+        },
+        {
+          "type": "tuple_binding",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "binop",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assign_expr",
+          "named": true
+        },
+        {
+          "type": "check_expr",
+          "named": true
+        },
+        {
+          "type": "check_test",
+          "named": true
+        },
+        {
+          "type": "contract_stmt",
+          "named": true
+        },
+        {
+          "type": "data_expr",
+          "named": true
+        },
+        {
+          "type": "fun_expr",
+          "named": true
+        },
+        {
+          "type": "let_expr",
+          "named": true
+        },
+        {
+          "type": "newtype_expr",
+          "named": true
+        },
+        {
+          "type": "rec_expr",
+          "named": true
+        },
+        {
+          "type": "spy_stmt",
+          "named": true
+        },
+        {
+          "type": "type_expr",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        },
+        {
+          "type": "when_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bool_expr",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "bracket_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cases_args",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "cases_binding",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cases_binding",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cases_branch",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "cases_args",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cases_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_branch",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "check_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "check_op",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "check_test",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "check_op",
+          "named": true
+        },
+        {
+          "type": "check_op_postfix",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "column_order",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comma_ann_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comma_anns",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comma_binops",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comma_names",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "construct_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "construct_modifier",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "contract_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "noparen_arrow_ann",
+          "named": true
+        },
+        {
+          "type": "ty_params",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data_sharing",
+          "named": true
+        },
+        {
+          "type": "data_variant",
+          "named": true
+        },
+        {
+          "type": "first_data_variant",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "ty_params",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_name_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "module_ref",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_sharing",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "fields",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_variant",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data_with",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "variant_constructor",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "data_with",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "fields",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "doc_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dot_ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dot_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "else_if",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "escape_sequence",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "extend_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "fields",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "doc_string",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "fun_header",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fields",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "first_data_variant",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data_with",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "variant_constructor",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_bind",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_bind",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "return_ann",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fun_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "doc_string",
+          "named": true
+        },
+        {
+          "type": "fun_header",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fun_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "args",
+          "named": true
+        },
+        {
+          "type": "return_ann",
+          "named": true
+        },
+        {
+          "type": "ty_params",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "get_bang_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hiding_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "id_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "id_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "else_if",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_pipe_branch",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_pipe_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "if_pipe_branch",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "import_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "import_source",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "import_name",
+          "named": true
+        },
+        {
+          "type": "import_special",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "import_special",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "import_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comma_names",
+          "named": true
+        },
+        {
+          "type": "import_source",
+          "named": true
+        },
+        {
+          "type": "include_spec",
+          "named": true
+        },
+        {
+          "type": "module_ref",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "include_data_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data_name_spec",
+          "named": true
+        },
+        {
+          "type": "hiding_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "include_module_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "include_name_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "include_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "include_data_spec",
+          "named": true
+        },
+        {
+          "type": "include_module_spec",
+          "named": true
+        },
+        {
+          "type": "include_name_spec",
+          "named": true
+        },
+        {
+          "type": "include_type_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "include_type_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inst_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "key",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lambda_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "doc_string",
+          "named": true
+        },
+        {
+          "type": "fun_header",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "let_binding",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "let_expr",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "let_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "toplevel_binding",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "letrec_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "let_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_table_extend_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "table_extend_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_table_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "table_header",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_table_item",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "load_table_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "load_table_specs",
+          "named": true
+        },
+        {
+          "type": "table_headers",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "load_table_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "load_table_specs",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "load_table_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "method_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "doc_string",
+          "named": true
+        },
+        {
+          "type": "fun_header",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module_ref",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multi_let_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "let_binding",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "name_ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "name_binding",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "name_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "hiding_spec",
+          "named": true
+        },
+        {
+          "type": "module_ref",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "newtype_bind",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "newtype_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "noparen_arrow_ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "arrow_ann_args",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "num_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "obj_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "obj_fields",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "obj_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "doc_string",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "fun_header",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "obj_fields",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "obj_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pred_ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "prim_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "bool_expr",
+          "named": true
+        },
+        {
+          "type": "frac_expr",
+          "named": true
+        },
+        {
+          "type": "num_expr",
+          "named": true
+        },
+        {
+          "type": "rfrac_expr",
+          "named": true
+        },
+        {
+          "type": "string_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provide_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "module_ref",
+          "named": true
+        },
+        {
+          "type": "provide_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provide_data_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "data_name_spec",
+          "named": true
+        },
+        {
+          "type": "hiding_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provide_module_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provide_name_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provide_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "provide_data_spec",
+          "named": true
+        },
+        {
+          "type": "provide_module_spec",
+          "named": true
+        },
+        {
+          "type": "provide_name_spec",
+          "named": true
+        },
+        {
+          "type": "provide_type_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provide_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "provide_block",
+          "named": true
+        },
+        {
+          "type": "provide_types_stmt",
+          "named": true
+        },
+        {
+          "type": "provide_vals_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provide_type_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "name_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provide_types_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "record_ann",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "provide_vals_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "assign_expr",
+          "named": true
+        },
+        {
+          "type": "check_expr",
+          "named": true
+        },
+        {
+          "type": "check_test",
+          "named": true
+        },
+        {
+          "type": "contract_stmt",
+          "named": true
+        },
+        {
+          "type": "data_expr",
+          "named": true
+        },
+        {
+          "type": "fun_expr",
+          "named": true
+        },
+        {
+          "type": "let_expr",
+          "named": true
+        },
+        {
+          "type": "newtype_expr",
+          "named": true
+        },
+        {
+          "type": "rec_expr",
+          "named": true
+        },
+        {
+          "type": "spy_stmt",
+          "named": true
+        },
+        {
+          "type": "type_expr",
+          "named": true
+        },
+        {
+          "type": "var_expr",
+          "named": true
+        },
+        {
+          "type": "when_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reactor_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "fields",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rec_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "toplevel_binding",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "trailing_comma_ann_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "return_ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "import_stmt",
+          "named": true
+        },
+        {
+          "type": "provide_stmt",
+          "named": true
+        },
+        {
+          "type": "use_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "spy_contents",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "spy_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "spy_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "spy_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "spy_contents",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escape_sequence",
+          "named": true
+        },
+        {
+          "type": "string_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "table_headers",
+          "named": true
+        },
+        {
+          "type": "table_rows",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_extend",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extend_fields",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_extend_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_extend_fields",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "list_table_extend_field",
+          "named": true
+        },
+        {
+          "type": "table_extend_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_extract",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_filter",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_headers",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "list_table_header",
+          "named": true
+        },
+        {
+          "type": "table_header",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_items",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "list_table_item",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_order",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "column_order",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_row",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "table_items",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_rows",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "table_row",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_select",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_update",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "obj_fields",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "toplevel_binding",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trailing_comma_ann_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "comma_ann_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tuple_ann",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tuple_binding",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "name_binding",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tuple_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "tuple_fields",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tuple_fields",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tuple_get",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ty_params",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "comma_names",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_bind",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "ty_params",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ann",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "ty_params",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_let_bind",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "newtype_bind",
+          "named": true
+        },
+        {
+          "type": "type_bind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_let_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "type_let_bind",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "update_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "fields",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "use_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "import_source",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "user_block_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "var_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "toplevel_binding",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variant_constructor",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "variant_members",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variant_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variant_members",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "variant_member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "when_expr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "app_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
+          "named": true
+        },
+        {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
+          "named": true
+        },
+        {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
+          "named": true
+        },
+        {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "where_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "%",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "->",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "::",
+    "named": false
+  },
+  {
+    "type": ":=",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
+    "type": "<=>",
+    "named": false
+  },
+  {
+    "type": "<>",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "==",
+    "named": false
+  },
+  {
+    "type": "=>",
+    "named": false
+  },
+  {
+    "type": "=~",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "^",
+    "named": false
+  },
+  {
+    "type": "and",
+    "named": false
+  },
+  {
+    "type": "as",
+    "named": false
+  },
+  {
+    "type": "ascending",
+    "named": false
+  },
+  {
+    "type": "ask",
+    "named": false
+  },
+  {
+    "type": "because",
+    "named": false
+  },
+  {
+    "type": "block:",
+    "named": false
+  },
+  {
+    "type": "block_comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "cases",
+    "named": false
+  },
+  {
+    "type": "check",
+    "named": false
+  },
+  {
+    "type": "check:",
+    "named": false
+  },
+  {
+    "type": "check_op_postfix",
+    "named": true
+  },
+  {
+    "type": "construct_modifier",
+    "named": true
+  },
+  {
+    "type": "data",
+    "named": false
+  },
+  {
+    "type": "descending",
+    "named": false
+  },
+  {
+    "type": "doc:",
+    "named": false
+  },
+  {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "else if",
+    "named": false
+  },
+  {
+    "type": "else:",
+    "named": false
+  },
+  {
+    "type": "end",
+    "named": false
+  },
+  {
+    "type": "examples",
+    "named": false
+  },
+  {
+    "type": "examples:",
+    "named": false
+  },
+  {
+    "type": "extend",
+    "named": false
+  },
+  {
+    "type": "extract",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": false
+  },
+  {
+    "type": "filter",
+    "named": false
+  },
+  {
+    "type": "for",
+    "named": false
+  },
+  {
+    "type": "frac_expr",
+    "named": true
+  },
+  {
+    "type": "from",
+    "named": false
+  },
+  {
+    "type": "fun",
+    "named": false
+  },
+  {
+    "type": "hiding",
+    "named": false
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "import",
+    "named": false
+  },
+  {
+    "type": "include",
+    "named": false
+  },
+  {
+    "type": "is",
+    "named": false
+  },
+  {
+    "type": "is-not",
+    "named": false
+  },
+  {
+    "type": "is-not-roughly",
+    "named": false
+  },
+  {
+    "type": "is-not<=>",
+    "named": false
+  },
+  {
+    "type": "is-not==",
+    "named": false
+  },
+  {
+    "type": "is-not=~",
+    "named": false
+  },
+  {
+    "type": "is-roughly",
+    "named": false
+  },
+  {
+    "type": "is<=>",
+    "named": false
+  },
+  {
+    "type": "is==",
+    "named": false
+  },
+  {
+    "type": "is=~",
+    "named": false
+  },
+  {
+    "type": "lam",
+    "named": false
+  },
+  {
+    "type": "let",
+    "named": false
+  },
+  {
+    "type": "letrec",
+    "named": false
+  },
+  {
+    "type": "line_comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "load-table",
+    "named": false
+  },
+  {
+    "type": "method",
+    "named": false
+  },
+  {
+    "type": "module",
+    "named": false
+  },
+  {
+    "type": "name",
+    "named": true
+  },
+  {
+    "type": "newtype",
+    "named": false
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "of",
+    "named": false
+  },
+  {
+    "type": "or",
+    "named": false
+  },
+  {
+    "type": "order",
+    "named": false
+  },
+  {
+    "type": "otherwise:",
+    "named": false
+  },
+  {
+    "type": "provide",
+    "named": false
+  },
+  {
+    "type": "provide-types",
+    "named": false
+  },
+  {
+    "type": "provide:",
+    "named": false
+  },
+  {
+    "type": "raises",
+    "named": false
+  },
+  {
+    "type": "raises-other-than",
+    "named": false
+  },
+  {
+    "type": "raises-satisfies",
+    "named": false
+  },
+  {
+    "type": "raises-violates",
+    "named": false
+  },
+  {
+    "type": "reactor",
+    "named": false
+  },
+  {
+    "type": "rec",
+    "named": false
+  },
+  {
+    "type": "ref",
+    "named": false
+  },
+  {
+    "type": "rfrac_expr",
+    "named": true
+  },
+  {
+    "type": "row:",
+    "named": false
+  },
+  {
+    "type": "sanitize",
+    "named": false
+  },
+  {
+    "type": "satisfies",
+    "named": false
+  },
+  {
+    "type": "select",
+    "named": false
+  },
+  {
+    "type": "shadow",
+    "named": false
+  },
+  {
+    "type": "sharing:",
+    "named": false
+  },
+  {
+    "type": "source:",
+    "named": false
+  },
+  {
+    "type": "spy",
+    "named": false
+  },
+  {
+    "type": "string_content",
+    "named": true
+  },
+  {
+    "type": "table:",
+    "named": false
+  },
+  {
+    "type": "template_expr",
+    "named": true
+  },
+  {
+    "type": "then:",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": false
+  },
+  {
+    "type": "type",
+    "named": false
+  },
+  {
+    "type": "type-let",
+    "named": false
+  },
+  {
+    "type": "update",
+    "named": false
+  },
+  {
+    "type": "use",
+    "named": false
+  },
+  {
+    "type": "using",
+    "named": false
+  },
+  {
+    "type": "var",
+    "named": false
+  },
+  {
+    "type": "violates",
+    "named": false
+  },
+  {
+    "type": "when",
+    "named": false
+  },
+  {
+    "type": "where:",
+    "named": false
+  },
+  {
+    "type": "with:",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]
