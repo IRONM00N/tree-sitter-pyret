@@ -5388,7 +5388,7 @@
         "value": 1,
         "content": {
           "type": "PATTERN",
-          "value": "[^\\\\\"\\n\\r]"
+          "value": "[^\\\\\"\\n\\r]+"
         }
       }
     },
@@ -5399,7 +5399,7 @@
         "value": 1,
         "content": {
           "type": "PATTERN",
-          "value": "[^\\\\'\\n\\r]"
+          "value": "[^\\\\'\\n\\r]+"
         }
       }
     },

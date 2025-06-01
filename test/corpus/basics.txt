@@ -10,12 +10,20 @@ end
 
 --------
 
-(source_file (import_stmt (import_source (import_special (name) (string
-(string_content) (string_content) (string_content) (string_content)
-(string_content) (string_content) (string_content) (string_content)
-(string_content))))) (provide_stmt (provide_block (provide_spec
-(provide_data_spec (data_name_spec (module_ref (name))))))))
-
+(source_file
+  (import_stmt
+    (import_source
+      (import_special
+        (name)
+        (string
+          (string_content)))))
+  (provide_stmt
+    (provide_block
+      (provide_spec
+        (provide_data_spec
+          (data_name_spec
+            (module_ref
+              (name))))))))
 
 ========
 Function

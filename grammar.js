@@ -761,8 +761,8 @@ module.exports = grammar({
       /\\[\\nrt"']/
     ),
 
-    unescaped_double_string_fragment: $ => token.immediate(prec(1, /[^\\"\n\r]/)),
-    unescaped_single_string_fragment: $ => token.immediate(prec(1, /[^\\'\n\r]/)),
+    unescaped_double_string_fragment: $ => token.immediate(prec(1, /[^\\"\n\r]+/)),
+    unescaped_single_string_fragment: $ => token.immediate(prec(1, /[^\\'\n\r]+/)),
 
     line_comment: $ => token(seq("#", /.*/)),
     // TODO: deal with nested multi-line comments
