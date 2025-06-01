@@ -5289,6 +5289,52 @@
           "members": [
             {
               "type": "STRING",
+              "value": "```"
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "escape_sequence"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "PATTERN",
+                      "value": "\\\\[\\\\nrt\"'`]"
+                    },
+                    "named": true,
+                    "value": "escape_sequence"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "unescaped_triple_string_fragment"
+                    },
+                    "named": true,
+                    "value": "string_content"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "IMMEDIATE_TOKEN",
+              "content": {
+                "type": "STRING",
+                "value": "```"
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
               "value": "\""
             },
             {
@@ -5380,6 +5426,17 @@
           "value": "\\\\[\\\\nrt\"']"
         }
       ]
+    },
+    "unescaped_triple_string_fragment": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 1,
+        "content": {
+          "type": "PATTERN",
+          "value": "(?:[^`\\\\]|`[^`]|``[^`])+"
+        }
+      }
     },
     "unescaped_double_string_fragment": {
       "type": "IMMEDIATE_TOKEN",

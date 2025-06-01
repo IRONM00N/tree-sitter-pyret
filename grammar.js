@@ -725,17 +725,20 @@ module.exports = grammar({
 
     dot_ann: $ => seq($.name, ".", $.name),
 
-    // ...
-
-    // identifier: $ => /[a-zA-Z_][a-zA-Z0-9_-]*/,
-
-    // lexer ish:
-
     number: $ => /[-+]?[0-9]+(?:\.[0-9]+)?(?:[eE][-+]?[0-9]+)?/,
 
     name: $ => /[a-zA-Z_][a-zA-Z0-9_-]*/, // TODO: should these matter?
 
     string: $ => choice(
+      seq(
+        "```",
+        repeat(choice(
+          $.escape_sequence,
+          alias(/\\[\\nrt"'`]/, $.escape_sequence),
+          alias($.unescaped_triple_string_fragment, $.string_content)
+        )),
+        token.immediate("```"),
+      ),
       seq(
         '"',
         repeat(choice(
@@ -752,7 +755,6 @@ module.exports = grammar({
         )),
         token.immediate("'"),
       ),
-      // TODO: multiline string
     ),
 
     escape_sequence: $ => choice(
@@ -762,8 +764,15 @@ module.exports = grammar({
       /\\[\\nrt"']/
     ),
 
-    unescaped_double_string_fragment: $ => token.immediate(prec(1, /[^\\"\n\r]+/)),
-    unescaped_single_string_fragment: $ => token.immediate(prec(1, /[^\\'\n\r]+/)),
+    unescaped_triple_string_fragment: $ => token.immediate(prec(1, 
+      /(?:[^`\\]|`[^`]|``[^`])+/
+    )),
+    unescaped_double_string_fragment: $ => token.immediate(prec(1, 
+      /[^\\"\n\r]+/
+    )),
+    unescaped_single_string_fragment: $ => token.immediate(prec(1, 
+      /[^\\'\n\r]+/
+    )),
 
     line_comment: $ => token(seq("#", /.*/)),
     // TODO: deal with nested multi-line comments

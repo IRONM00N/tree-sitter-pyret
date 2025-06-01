@@ -395,3 +395,80 @@ extract name from t end
       (name)
       (id_expr
         (id_expr)))))
+
+=============
+Triple String
+=============
+
+```
+foo
+\123\x7F\u0ABC\\\n\r\t\"\'\` ` ``  
+```
+
+---
+
+(source_file
+  (block
+    (prim_expr
+      (string_expr
+        (string
+          (string_content)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (string_content))))))
+
+=============
+Double String
+=============
+
+"foo \123\x7F\u0ABC\\\n\r\t\"\'"
+
+---
+
+(source_file
+  (block
+    (prim_expr
+      (string_expr
+        (string
+          (string_content)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence))))))
+
+=============
+Single String
+=============
+
+'foo \123\x7F\u0ABC\\\n\r\t\"\''
+
+---
+
+(source_file
+  (block
+    (prim_expr
+      (string_expr
+        (string
+          (string_content)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence)
+          (escape_sequence))))))
