@@ -48,12 +48,12 @@ module.exports = grammar({
   ],
 
   conflicts: $ => [[$.binop, $.inst_expr], [$._binop_expr, $.inst_expr]],
-  
+
   word: $ => $.name,
 
   rules: {
     source_file: $ => seq(
-      seq(optional($.use_stmt), repeat(choice($.provide_stmt, $.import_stmt))), 
+      seq(optional($.use_stmt), repeat(choice($.provide_stmt, $.import_stmt))),
       optional($.block),
     ),
 
@@ -79,10 +79,10 @@ module.exports = grammar({
       seq("import", $.comma_names, "from", $.import_source),),
     import_source: $ => choice($.import_special, $.import_name),
     import_special: $ => seq(
-      $.name, 
-      alias($.paren_no_space, "("), 
-      $.string, 
-      repeat(seq(",", $.string)), 
+      $.name,
+      alias($.paren_no_space, "("),
+      $.string,
+      repeat(seq(",", $.string)),
       ")"
     ),
     import_name: $ => $.name,
@@ -114,16 +114,16 @@ module.exports = grammar({
 
     provide_block: $ => choice(
       seq(
-        "provide:", 
+        "provide:",
         optional(
           seq($.provide_spec, repeat(seq(",", $.provide_spec)), optional(","))
         ),
         "end",
       ),
       seq(
-        "provide", 
-        "from", 
-        $.module_ref, 
+        "provide",
+        "from",
+        $.module_ref,
         ":",
         optional(
           seq($.provide_spec, repeat(seq(",", $.provide_spec)), optional(","))
@@ -152,7 +152,7 @@ module.exports = grammar({
     provide_module_spec: $ => seq("module", $.name_spec),
 
     hiding_spec: $ => seq(
-      "hiding", 
+      "hiding",
       alias(choice($.paren_space, $.paren_no_space), "("),
       optional(seq(repeat(seq($.name, ",")), $.name)),
       ")",
@@ -160,7 +160,7 @@ module.exports = grammar({
 
     module_ref: $ => seq(repeat(seq($.name, ".")), $.name),
 
-    comma_names: $ => seq($.name, repeat(seq(",", $.name))), 
+    comma_names: $ => seq($.name, repeat(seq(",", $.name))),
 
     block: $ => repeat1($._stmt),
 
@@ -182,31 +182,31 @@ module.exports = grammar({
     ),
 
     spy_stmt: $ => seq(
-      "spy", 
-      optional($._binop_expr), 
-      ":", 
-      optional($.spy_contents), 
+      "spy",
+      optional($._binop_expr),
+      ":",
+      optional($.spy_contents),
       "end",
     ),
     spy_contents: $ => seq($.spy_field, repeat(seq(",", $.spy_field))),
     spy_field: $ => choice($.id_expr, seq($.name, ":", $._binop_expr)),
-    
+
     type_expr: $ => seq("type", $.name, optional($.ty_params), "=", $.ann),
     newtype_expr: $ => seq("newtype", $.name, "as", $.name),
     let_expr: $ => seq($.toplevel_binding, "=", $._binop_expr),
     binding: $ => choice($.name_binding, $.tuple_binding),
 
     tuple_binding: $ => seq(
-      "{", 
+      "{",
       repeat(seq($.binding, ";")),
-      $.binding, 
+      $.binding,
       optional(";"),
       "}",
       optional(seq("as", $.name_binding)),
     ),
     name_binding: $ => prec(1, seq(
-      optional("shadow"), 
-      $.name, 
+      optional("shadow"),
+      $.name,
       optional(seq("::", $.ann)),
     )),
 
@@ -216,45 +216,45 @@ module.exports = grammar({
       $.let_binding,
       repeat(seq(",", $.let_binding)),
       choice("block:", ":"),
-      optional($.block), 
+      optional($.block),
       "end",
     ),
     let_binding: $ => choice($.let_expr, $.var_expr),
     letrec_expr: $ => seq(
-      "letrec", 
-      $.let_expr, 
-      repeat(seq(",", $.let_expr)), 
-      choice("block:", ":"), 
-      optional($.block), 
+      "letrec",
+      $.let_expr,
+      repeat(seq(",", $.let_expr)),
+      choice("block:", ":"),
+      optional($.block),
       "end"
     ),
 
     type_bind: $ => seq($.name, optional($.ty_params), "=", $.ann),
-    newtype_bind: $ => seq("newtype", $.name, "as", $.name),  
+    newtype_bind: $ => seq("newtype", $.name, "as", $.name),
 
     type_let_bind: $ => choice($.type_bind, $.newtype_bind),
     type_let_expr: $ => seq(
-      "type-let", 
-      $.type_let_bind, 
+      "type-let",
+      $.type_let_bind,
       repeat(seq(",", $.type_let_bind)),
       choice("block:", ":"),
-      optional($.block), 
+      optional($.block),
       "end",
     ),
 
     contract_stmt: $ => seq(
-      $.name, 
-      "::", 
-      optional($.ty_params), 
+      $.name,
+      "::",
+      optional($.ty_params),
       choice($.ann, $.noparen_arrow_ann)
     ),
 
     fun_expr: $ => seq(
-      "fun", 
-      $.name, 
-      $.fun_header, 
+      "fun",
+      $.name,
+      $.fun_header,
       choice("block:", ":"),
-      optional($.doc_string), 
+      optional($.doc_string),
       optional($.block),
       optional($.where_clause),
       "end",
@@ -280,7 +280,7 @@ module.exports = grammar({
         $._binop_expr,
         $.check_op,
         optional(seq(
-          "%", 
+          "%",
           alias(choice($.paren_space, $.paren_no_space), "("),
           $._binop_expr,
           ")"
@@ -289,8 +289,8 @@ module.exports = grammar({
         optional(seq("because", $._binop_expr)),
       ),
       seq(
-        $._binop_expr, 
-        $.check_op_postfix, 
+        $._binop_expr,
+        $.check_op_postfix,
         optional(seq("because", $._binop_expr))
       ),
       // NOTE: I don't use this case and instead allow _binop_expr as a stmt
@@ -298,13 +298,13 @@ module.exports = grammar({
     ),
 
     data_expr: $ => seq(
-      "data", 
+      "data",
       $.name,
-      optional($.ty_params), 
+      optional($.ty_params),
       ":",
       optional($.first_data_variant),
       repeat($.data_variant),
-      optional($.data_sharing), 
+      optional($.data_sharing),
       optional($.where_clause),
       "end",
     ),
@@ -321,7 +321,7 @@ module.exports = grammar({
       alias($.paren_no_space, "("),
       optional(seq($.variant_member, repeat(seq(",", $.variant_member)))),
       ")"
-    ), 
+    ),
     variant_member: $ => seq(optional("ref"), $.binding),
     data_with: $ => seq("with:", $.fields),
     data_sharing: $ => seq("sharing:", $.fields),
@@ -331,14 +331,14 @@ module.exports = grammar({
     assign_expr: $ => seq($.name, ":=", $._binop_expr),
 
     when_expr: $ => seq(
-      "when", 
-      $._binop_expr, 
-      choice("block:", ":"), 
-      optional($.block), 
+      "when",
+      $._binop_expr,
+      choice("block:", ":"),
+      optional($.block),
       "end",
     ),
 
-    _binop_expr: $ => prec.left(PREC.Binary, 
+    _binop_expr: $ => prec.left(PREC.Binary,
       seq($._expr, repeat(seq($.binop, $._expr)))
     ),
 
@@ -349,7 +349,7 @@ module.exports = grammar({
     ),
 
     check_op: $ => choice(
-      "is", "is==", "is=~", "is<=>", "is-roughly", "is-not-roughly", 
+      "is", "is==", "is=~", "is<=>", "is-roughly", "is-not-roughly",
       "is-not", "is-not==", "is-not=~", "is-not<=>",
       "raises", "raises-other-than",
       "satisfies", "violates",
@@ -359,10 +359,10 @@ module.exports = grammar({
     check_op_postfix: $ => "does-not-raise",
 
     _expr: $ => choice(
-      $.prim_expr, 
-      $.id_expr, 
-      $.prim_expr, 
-      $.lambda_expr, 
+      $.prim_expr,
+      $.id_expr,
+      $.prim_expr,
+      $.lambda_expr,
       $.method_expr,
       $.app_expr,
       $.obj_expr,
@@ -375,17 +375,17 @@ module.exports = grammar({
       $.update_expr,
       $.extend_expr,
       $.if_expr,
-      $.if_pipe_expr, 
+      $.if_pipe_expr,
       $.cases_expr,
       $.for_expr,
       $.user_block_expr,
       $.inst_expr,
-      $.multi_let_expr, 
+      $.multi_let_expr,
       $.letrec_expr,
       $.type_let_expr,
       $.construct_expr,
       $.table_select,
-      $.table_extend, 
+      $.table_extend,
       $.table_filter,
       $.table_order,
       $.table_extract,
@@ -400,17 +400,17 @@ module.exports = grammar({
     // NOTE: bad-expr elided
 
     paren_expr: $ => seq(
-      alias(choice($.paren_space, $.paren_after_brace), "("), 
-      $._binop_expr, 
+      alias(choice($.paren_space, $.paren_after_brace), "("),
+      $._binop_expr,
       ")"
     ),
 
-    id_expr: $ => alias($.name, $.id_expr), 
+    id_expr: $ => alias($.name, $.id_expr),
 
     prim_expr: $ => choice(
-      $.num_expr, 
-      $.frac_expr, 
-      $.rfrac_expr, 
+      $.num_expr,
+      $.frac_expr,
+      $.rfrac_expr,
       $.bool_expr,
       $.string_expr
     ),
@@ -423,8 +423,8 @@ module.exports = grammar({
 
     lambda_expr: $ => choice(
       seq(
-        "lam", 
-        $.fun_header, 
+        "lam",
+        $.fun_header,
         choice("block:", ":"),
         optional($.doc_string),
         optional($.block),
@@ -459,14 +459,14 @@ module.exports = grammar({
       seq(
         $._expr,
         alias($.paren_space, "("),
-        $._binop_expr, 
-        repeat1(seq(",", $._binop_expr)), 
+        $._binop_expr,
+        repeat1(seq(",", $._binop_expr)),
         ")",
       ),
     ),
 
     app_args: $ => seq(
-      alias($.paren_no_space, "("), 
+      alias($.paren_no_space, "("),
       optional($.comma_binops),
       ")"
     ),
@@ -476,10 +476,10 @@ module.exports = grammar({
     trailing_comma_binops: $ => seq($.comma_binops, optional(",")),
 
     // TODO: is this correct?
-    inst_expr: $ => prec.dynamic(PREC.Call + 1, 
+    inst_expr: $ => prec.dynamic(PREC.Call + 1,
       seq($._expr, "<", $.ann, repeat(seq(",", $.ann)), ">")
     ),
-  
+
     tuple_expr: $ => seq("{", $.tuple_fields, "}"),
     tuple_fields: $ => seq(
       $._binop_expr, repeat(seq(";", $._binop_expr)), optional(";")
@@ -493,17 +493,17 @@ module.exports = grammar({
       seq("{", "}")
     ),
     obj_fields: $ => seq(
-      $.obj_field, 
-      repeat(seq(",", $.obj_field)), 
+      $.obj_field,
+      repeat(seq(",", $.obj_field)),
       optional(",")
     ),
     obj_field: $ => choice(
       seq($.key, ":", $._binop_expr),
       seq("ref", $.key, optional(seq("::", $.ann)), ":", $._binop_expr),
       seq(
-        "method", 
-        $.key, 
-        $.fun_header, 
+        "method",
+        $.key,
+        $.fun_header,
         choice("block:", ":"),
         optional($.doc_string),
         optional($.block),
@@ -516,10 +516,10 @@ module.exports = grammar({
     field: $ => choice(
       seq($.key, ":", $._binop_expr),
       seq(
-        "method", 
+        "method",
         $.key,
-        $.fun_header, 
-        choice("block:", ":"), 
+        $.fun_header,
+        choice("block:", ":"),
         optional($.doc_string),
         optional($.block),
         optional($.where_clause),
@@ -547,7 +547,7 @@ module.exports = grammar({
       "table:", optional($.table_headers), optional($.table_rows), "end"
     ),
     table_headers: $ => seq(
-      repeat($.list_table_header), 
+      repeat($.list_table_header),
       $.table_header
     ),
     list_table_header: $ => seq($.table_header, ","),
@@ -569,8 +569,8 @@ module.exports = grammar({
     update_expr: $ => seq($._expr, "!", "{", $.fields, "}"),
 
     if_expr: $ => seq(
-      "if", 
-      $._binop_expr, 
+      "if",
+      $._binop_expr,
       choice("block:", ":"),
       optional($.block),
       repeat($.else_if),
@@ -579,7 +579,7 @@ module.exports = grammar({
     ),
     else_if: $ => seq("else if", $._binop_expr, ":", optional($.block)),
     if_pipe_expr: $ => seq(
-      "ask", 
+      "ask",
       choice("block:", ":"),
       repeat($.if_pipe_branch),
       optional(seq("|", "otherwise:", optional($.block))),
@@ -589,7 +589,7 @@ module.exports = grammar({
 
     cases_binding: $ => seq(optional("ref"), $.binding),
     cases_args: $ => seq(
-      alias($.paren_no_space, "("), 
+      alias($.paren_no_space, "("),
       optional(seq($.cases_binding, repeat(seq(",", $.cases_binding)), ")"))
     ),
     cases_expr: $ => seq(
@@ -607,8 +607,8 @@ module.exports = grammar({
 
     for_bind: $ => seq($.binding, "from", $._binop_expr),
     for_expr: $ => seq(
-      "for", 
-      $._expr, 
+      "for",
+      $._expr,
       alias($.paren_no_space, "("),
       optional(seq($.for_bind, repeat(seq(",", $.for_bind)))),
       ")",
@@ -623,34 +623,34 @@ module.exports = grammar({
       "select", $.name, repeat(seq(",", $.name)), "from", $._expr, "end",
     ),
     table_filter: $ => seq(
-      "sieve", 
-      $._expr, 
+      "sieve",
+      $._expr,
       optional(seq("using", $.binding, repeat(seq(",", $.binding)))),
-      ":", 
-      $._binop_expr, 
+      ":",
+      $._binop_expr,
       "end",
     ),
     table_order: $ => seq(
-      "order", 
-      $._expr, 
-      ":", 
-      $.column_order, 
-      repeat(seq(",", $.column_order)), 
+      "order",
+      $._expr,
+      ":",
+      $.column_order,
+      repeat(seq(",", $.column_order)),
       "end",
     ),
     table_extract: $ => seq(
       "extract", $.name, "from", $._expr, "end",
     ),
     table_update: $ => seq(
-      "transform", 
+      "transform",
       $._expr,
       optional(seq("using", $.binding, repeat(seq(",", $.binding)))),
-      ":", 
+      ":",
       $.obj_fields,
       "end",
     ),
     table_extend: $ => seq(
-      "extend", 
+      "extend",
       $._expr,
       optional(seq("using", $.binding, repeat(seq(",", $.binding)))),
       ":",
@@ -658,7 +658,7 @@ module.exports = grammar({
       "end",
     ),
     table_extend_fields: $ => seq(
-      repeat($.list_table_extend_field), 
+      repeat($.list_table_extend_field),
       $.table_extend_field,
       optional(","),
     ),
@@ -667,7 +667,7 @@ module.exports = grammar({
       seq($.key, optional(seq("::", $.ann)), ":", $._binop_expr),
       seq($.key, optional(seq("::", $.ann)), ":", $._expr, "of", $.name),
     ),
-    
+
     load_table_expr: $ => seq(
       "load-table", ":", $.table_headers, optional($.load_table_specs), "end"
     ),
@@ -679,15 +679,15 @@ module.exports = grammar({
     ),
 
     user_block_expr: $ => seq("block:", optional($.block), "end"),
-    
+
     ann: $ => choice(
-      $.name_ann, 
+      $.name_ann,
       $.record_ann,
-      $.arrow_ann, 
-      $.app_ann, 
-      $.pred_ann, 
-      $.dot_ann, 
-      $.tuple_ann 
+      $.arrow_ann,
+      $.app_ann,
+      $.pred_ann,
+      $.dot_ann,
+      $.tuple_ann
     ),
 
     name_ann: $ => $.name, // TODO: should this be an alias?
@@ -750,7 +750,7 @@ module.exports = grammar({
       seq(
         '"',
         repeat(choice(
-          $.escape_sequence, 
+          $.escape_sequence,
           alias($.unescaped_double_string_fragment, $.string_content)
         )),
         token.immediate('"'),
@@ -758,7 +758,7 @@ module.exports = grammar({
       seq(
         "'",
         repeat(choice(
-          $.escape_sequence, 
+          $.escape_sequence,
           alias($.unescaped_single_string_fragment, $.string_content)
         )),
         token.immediate("'"),
@@ -766,19 +766,19 @@ module.exports = grammar({
     ),
 
     escape_sequence: $ => choice(
-      /\\[01234567]{1,3}/, 
-      /\\x[0-9a-fA-F]{1,2}/, 
-      /\\u[0-9a-fA-F]{1,4}/, 
+      /\\[01234567]{1,3}/,
+      /\\x[0-9a-fA-F]{1,2}/,
+      /\\u[0-9a-fA-F]{1,4}/,
       /\\[\\nrt"']/
     ),
 
-    unescaped_triple_string_fragment: $ => token.immediate(prec(1, 
+    unescaped_triple_string_fragment: $ => token.immediate(prec(1,
       /(?:[^`\\]|`[^`]|``[^`])+/
     )),
-    unescaped_double_string_fragment: $ => token.immediate(prec(1, 
+    unescaped_double_string_fragment: $ => token.immediate(prec(1,
       /[^\\"\n\r]+/
     )),
-    unescaped_single_string_fragment: $ => token.immediate(prec(1, 
+    unescaped_single_string_fragment: $ => token.immediate(prec(1,
       /[^\\'\n\r]+/
     )),
 

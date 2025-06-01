@@ -37,7 +37,7 @@ end
 
 ---
 
-(source_file (import_stmt (import_source (import_name (name))) (name)) 
+(source_file (import_stmt (import_source (import_name (name))) (name))
   (block (fun_expr (name) (fun_header (args (binding (name_binding (name))))))))
 
 
@@ -272,8 +272,8 @@ select name from t end
 Table Sieve
 ===========
 
-sieve t using score: 
-  score >= 80 
+sieve t using score:
+  score >= 80
 end
 
 ---
@@ -297,7 +297,7 @@ end
 Table Order
 ===========
 
-order t: 
+order t:
   score descending
 end
 
@@ -315,8 +315,8 @@ end
 Table Extend
 ===========
 
-extend t using score: 
-  grade: if score >= 80: "B" else: "C" end 
+extend t using score:
+  grade: if score >= 80: "B" else: "C" end
 end
 
 ---
@@ -356,8 +356,8 @@ end
 Table Transform
 ===============
 
-transform t using score: 
-  score: score + 5 
+transform t using score:
+  score: score + 5
 end
 
 ---
@@ -402,7 +402,7 @@ Triple String
 
 ```
 foo
-\123\x7F\u0ABC\\\n\r\t\"\'\` ` ``  
+\123\x7F\u0ABC\\\n\r\t\"\'\` ` ``
 ```
 
 ---
