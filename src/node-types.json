@@ -480,10 +480,26 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
+          "type": "app_expr",
+          "named": true
+        },
+        {
           "type": "assign_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
           "named": true
         },
         {
@@ -495,6 +511,10 @@
           "named": true
         },
         {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
           "type": "contract_stmt",
           "named": true
         },
@@ -503,7 +523,43 @@
           "named": true
         },
         {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
           "type": "fun_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
           "named": true
         },
         {
@@ -511,7 +567,35 @@
           "named": true
         },
         {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
           "type": "newtype_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
           "named": true
         },
         {
@@ -523,7 +607,59 @@
           "named": true
         },
         {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
           "type": "type_expr",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
           "named": true
         },
         {
@@ -931,7 +1067,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "app_expr",
@@ -4612,11 +4748,27 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
         {
+          "type": "app_expr",
+          "named": true
+        },
+        {
           "type": "assign_expr",
+          "named": true
+        },
+        {
+          "type": "binop",
+          "named": true
+        },
+        {
+          "type": "bracket_expr",
+          "named": true
+        },
+        {
+          "type": "cases_expr",
           "named": true
         },
         {
@@ -4628,6 +4780,10 @@
           "named": true
         },
         {
+          "type": "construct_expr",
+          "named": true
+        },
+        {
           "type": "contract_stmt",
           "named": true
         },
@@ -4636,7 +4792,43 @@
           "named": true
         },
         {
+          "type": "dot_expr",
+          "named": true
+        },
+        {
+          "type": "extend_expr",
+          "named": true
+        },
+        {
+          "type": "for_expr",
+          "named": true
+        },
+        {
           "type": "fun_expr",
+          "named": true
+        },
+        {
+          "type": "get_bang_expr",
+          "named": true
+        },
+        {
+          "type": "id_expr",
+          "named": true
+        },
+        {
+          "type": "if_expr",
+          "named": true
+        },
+        {
+          "type": "if_pipe_expr",
+          "named": true
+        },
+        {
+          "type": "inst_expr",
+          "named": true
+        },
+        {
+          "type": "lambda_expr",
           "named": true
         },
         {
@@ -4644,7 +4836,35 @@
           "named": true
         },
         {
+          "type": "letrec_expr",
+          "named": true
+        },
+        {
+          "type": "load_table_expr",
+          "named": true
+        },
+        {
+          "type": "method_expr",
+          "named": true
+        },
+        {
+          "type": "multi_let_expr",
+          "named": true
+        },
+        {
           "type": "newtype_expr",
+          "named": true
+        },
+        {
+          "type": "obj_expr",
+          "named": true
+        },
+        {
+          "type": "prim_expr",
+          "named": true
+        },
+        {
+          "type": "reactor_expr",
           "named": true
         },
         {
@@ -4656,7 +4876,59 @@
           "named": true
         },
         {
+          "type": "table_expr",
+          "named": true
+        },
+        {
+          "type": "table_extend",
+          "named": true
+        },
+        {
+          "type": "table_extract",
+          "named": true
+        },
+        {
+          "type": "table_filter",
+          "named": true
+        },
+        {
+          "type": "table_order",
+          "named": true
+        },
+        {
+          "type": "table_select",
+          "named": true
+        },
+        {
+          "type": "table_update",
+          "named": true
+        },
+        {
+          "type": "template_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_expr",
+          "named": true
+        },
+        {
+          "type": "tuple_get",
+          "named": true
+        },
+        {
           "type": "type_expr",
+          "named": true
+        },
+        {
+          "type": "type_let_expr",
+          "named": true
+        },
+        {
+          "type": "update_expr",
+          "named": true
+        },
+        {
+          "type": "user_block_expr",
           "named": true
         },
         {

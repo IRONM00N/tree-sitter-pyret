@@ -852,6 +852,10 @@
         {
           "type": "SYMBOL",
           "name": "contract_stmt"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_binop_expr"
         }
       ]
     },
@@ -1850,10 +1854,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_binop_expr"
         }
       ]
     },

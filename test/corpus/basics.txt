@@ -119,38 +119,34 @@ end
 
 (source_file
   (block
-    (check_test
-      (cases_expr
-        (ann
-          (name_ann
-            (name)))
-        (id_expr
-          (id_expr))
-            (cases_branch
-              (name)
-              (block
-                (check_test
-                  (id_expr
-                    (id_expr)))))
-            (cases_branch
-              (name)
-              (cases_args
-                (cases_binding
-                  (binding
-                    (name_binding
-                      (name))))
-                (cases_binding
-                  (binding
-                    (name_binding
-                      (name)))))
-              (block
-                (check_test
-                  (id_expr
-                    (id_expr)))
-                  (check_test
-                    (prim_expr
-                      (num_expr
-                        (number))))))))))
+    (cases_expr
+      (ann
+        (name_ann
+          (name)))
+      (id_expr
+        (id_expr))
+      (cases_branch
+        (name)
+        (block
+          (id_expr
+            (id_expr))))
+      (cases_branch
+        (name)
+        (cases_args
+          (cases_binding
+            (binding
+              (name_binding
+                (name))))
+          (cases_binding
+            (binding
+              (name_binding
+                (name)))))
+        (block
+          (id_expr
+            (id_expr))
+          (prim_expr
+            (num_expr
+              (number))))))))
 
 ================
 List Constructor
@@ -163,22 +159,21 @@ List Constructor
 
 (source_file
   (block
-    (check_test
-      (construct_expr
-        (id_expr
-          (id_expr))
-        (prim_expr
-          (num_expr
-            (number)))
-        (prim_expr
-          (num_expr
-            (number)))
-        (prim_expr
-          (num_expr
-            (number)))
-        (prim_expr
-          (num_expr
-            (number)))))))
+    (construct_expr
+      (id_expr
+        (id_expr))
+      (prim_expr
+        (num_expr
+          (number)))
+      (prim_expr
+        (num_expr
+          (number)))
+      (prim_expr
+        (num_expr
+          (number)))
+      (prim_expr
+        (num_expr
+          (number))))))
 
 
 =============
@@ -191,15 +186,14 @@ Block Comment
 
 (source_file
   (block
-    (check_test
-      (prim_expr
-        (num_expr
-          (number)))
-      (block_comment)
-      (binop)
-      (prim_expr
-        (num_expr
-          (number))))))
+    (prim_expr
+      (num_expr
+        (number)))
+    (block_comment)
+    (binop)
+    (prim_expr
+      (num_expr
+        (number)))))
 
 =====
 Table
@@ -269,11 +263,10 @@ select name from t end
 
 (source_file
   (block
-    (check_test
-      (table_select
-        (name)
-        (id_expr
-          (id_expr))))))
+    (table_select
+      (name)
+      (id_expr
+        (id_expr)))))
 
 ===========
 Table Sieve
@@ -287,19 +280,18 @@ end
 
 (source_file
   (block
-    (check_test
-      (table_filter
-        (id_expr
-          (id_expr))
-        (binding
-          (name_binding
-            (name)))
-        (id_expr
-          (id_expr))
-        (binop)
-        (prim_expr
-          (num_expr
-            (number)))))))
+    (table_filter
+      (id_expr
+        (id_expr))
+      (binding
+        (name_binding
+          (name)))
+      (id_expr
+        (id_expr))
+      (binop)
+      (prim_expr
+        (num_expr
+          (number))))))
 
 ===========
 Table Order
@@ -313,12 +305,11 @@ end
 
 (source_file
   (block
-    (check_test
-      (table_order
-        (id_expr
-          (id_expr))
-        (column_order
-          (name))))))
+    (table_order
+      (id_expr
+        (id_expr))
+      (column_order
+        (name)))))
 
 ===========
 Table Extend
@@ -333,36 +324,33 @@ end
 
 (source_file
   (block
-    (check_test
-      (table_extend
-        (id_expr
-          (id_expr))
-        (binding
-          (name_binding
-            (name)))
-        (table_extend_fields
-          (table_extend_field
-            (key
-              (name))
-            (if_expr
-              (id_expr
-                (id_expr))
-              (binop)
+    (table_extend
+      (id_expr
+        (id_expr))
+      (binding
+        (name_binding
+          (name)))
+      (table_extend_fields
+        (table_extend_field
+          (key
+            (name))
+          (if_expr
+            (id_expr
+              (id_expr))
+            (binop)
+            (prim_expr
+              (num_expr
+                (number)))
+            (block
               (prim_expr
-                (num_expr
-                  (number)))
-              (block
-                (check_test
-                  (prim_expr
-                    (string_expr
-                      (string
-                        (string_content))))))
-              (block
-                (check_test
-                  (prim_expr
-                    (string_expr
-                      (string
-                        (string_content)))))))))))))
+                (string_expr
+                  (string
+                    (string_content)))))
+            (block
+              (prim_expr
+                (string_expr
+                  (string
+                    (string_content)))))))))))
 
 ===============
 Table Transform
@@ -376,23 +364,22 @@ end
 
 (source_file
   (block
-    (check_test
-      (table_update
-        (id_expr
-          (id_expr))
-        (binding
-          (name_binding
-            (name)))
-        (obj_fields
-          (obj_field
-            (key
-              (name))
-            (id_expr
-              (id_expr))
-            (binop)
-            (prim_expr
-              (num_expr
-                (number)))))))))
+    (table_update
+      (id_expr
+        (id_expr))
+      (binding
+        (name_binding
+          (name)))
+      (obj_fields
+        (obj_field
+          (key
+            (name))
+          (id_expr
+            (id_expr))
+          (binop)
+          (prim_expr
+            (num_expr
+              (number))))))))
 
 =============
 Table Extract
@@ -404,8 +391,7 @@ extract name from t end
 
 (source_file
   (block
-    (check_test
-      (table_extract
-        (name)
-        (id_expr
-          (id_expr))))))
+    (table_extract
+      (name)
+      (id_expr
+        (id_expr)))))

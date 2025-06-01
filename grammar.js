@@ -178,6 +178,7 @@ module.exports = grammar({
       $.check_test,
       $.check_expr,
       $.contract_stmt,
+      $._binop_expr
     ),
 
     spy_stmt: $ => seq(
@@ -192,7 +193,7 @@ module.exports = grammar({
     
     type_expr: $ => seq("type", $.name, optional($.ty_params), "=", $.ann),
     newtype_expr: $ => seq("newtype", $.name, "as", $.name),
-    let_expr: $ => seq($.toplevel_binding, "=", $._binop_expr), // TODO: why is this binop?
+    let_expr: $ => seq($.toplevel_binding, "=", $._binop_expr),
     binding: $ => choice($.name_binding, $.tuple_binding),
 
     tuple_binding: $ => seq(
@@ -292,7 +293,8 @@ module.exports = grammar({
         $.check_op_postfix, 
         optional(seq("because", $._binop_expr))
       ),
-      $._binop_expr,
+      // NOTE: I don't use this case and instead allow _binop_expr as a stmt
+      // $._binop_expr,
     ),
 
     data_expr: $ => seq(
