@@ -41,9 +41,9 @@ module.exports = grammar({
   ],
 
   externals: $ => [
-    $._paren_no_space,
-    $._paren_space,
-    $._paren_after_brace,
+    $.paren_no_space,
+    $.paren_space,
+    $.paren_after_brace,
     $.error_sentinel
   ],
 
@@ -80,7 +80,7 @@ module.exports = grammar({
     import_source: $ => choice($.import_special, $.import_name),
     import_special: $ => seq(
       $.name, 
-      $._paren_no_space, 
+      alias($.paren_no_space, "("), 
       $.string, 
       repeat(seq(",", $.string)), 
       ")"
@@ -153,7 +153,7 @@ module.exports = grammar({
 
     hiding_spec: $ => seq(
       "hiding", 
-      choice($._paren_space, $._paren_no_space),
+      alias(choice($.paren_space, $.paren_no_space), "("),
       optional(seq(repeat(seq($.name, ",")), $.name)),
       ")",
     ),
@@ -262,7 +262,7 @@ module.exports = grammar({
     fun_header: $ => seq(optional($.ty_params), $.args, optional($.return_ann)), // bad-arg choice elided
     ty_params: $ => seq("<", $.comma_names, ">"),
     args: $ => seq(
-      choice($._paren_no_space, $._paren_after_brace),
+      alias(choice($.paren_no_space, $.paren_after_brace), "("),
       optional(seq($.binding, repeat(seq(",", $.binding)))),
       ")"
     ),
@@ -281,7 +281,7 @@ module.exports = grammar({
         $.check_op,
         optional(seq(
           "%", 
-          choice($._paren_space, $._paren_no_space), 
+          alias(choice($.paren_space, $.paren_no_space), "("),
           $._binop_expr,
           ")"
         )),
@@ -318,7 +318,7 @@ module.exports = grammar({
       seq("|", $.name, optional($.data_with)),
     ),
     variant_members: $ => seq(
-      $._paren_no_space,
+      alias($.paren_no_space, "("),
       optional(seq($.variant_member, repeat(seq(",", $.variant_member)))),
       ")"
     ), 
@@ -400,7 +400,7 @@ module.exports = grammar({
     // NOTE: bad-expr elided
 
     paren_expr: $ => seq(
-      choice($._paren_space, $._paren_after_brace), 
+      alias(choice($.paren_space, $.paren_after_brace), "("), 
       $._binop_expr, 
       ")"
     ),
@@ -455,17 +455,21 @@ module.exports = grammar({
     app_expr: $ => choice(
       seq($._expr, $.app_args),
       // TODO: maybe these should be removed? these seem like a hack
-      seq($._expr, $._paren_space, ")"),
+      seq($._expr, alias($.paren_space, "("), ")"),
       seq(
         $._expr,
-        $._paren_space, 
+        alias($.paren_space, "("),
         $._binop_expr, 
         repeat1(seq(",", $._binop_expr)), 
         ")",
       ),
     ),
 
-    app_args: $ => seq($._paren_no_space, optional($.comma_binops), ")"),
+    app_args: $ => seq(
+      alias($.paren_no_space, "("), 
+      optional($.comma_binops),
+      ")"
+    ),
     comma_binops: $ => prec.left(
       seq($._binop_expr, repeat(seq(",", $._binop_expr)))
     ),
@@ -585,12 +589,12 @@ module.exports = grammar({
 
     cases_binding: $ => seq(optional("ref"), $.binding),
     cases_args: $ => seq(
-      $._paren_no_space, 
+      alias($.paren_no_space, "("), 
       optional(seq($.cases_binding, repeat(seq(",", $.cases_binding)), ")"))
     ),
     cases_expr: $ => seq(
       "cases",
-      choice($._paren_space, $._paren_no_space),
+      alias(choice($.paren_space, $.paren_no_space), "("),
       $.ann,
       ")",
       $._binop_expr,
@@ -605,7 +609,7 @@ module.exports = grammar({
     for_expr: $ => seq(
       "for", 
       $._expr, 
-      $._paren_no_space,
+      alias($.paren_no_space, "("),
       optional(seq($.for_bind, repeat(seq(",", $.for_bind)))),
       ")",
       optional($.return_ann),
@@ -702,13 +706,13 @@ module.exports = grammar({
     arrow_ann_args: $ => choice(
       $.comma_anns,
       seq(
-        choice($._paren_space, $._paren_no_space, $._paren_after_brace),
+        alias(choice($.paren_space, $.paren_no_space, $.paren_after_brace), "("),
         $.comma_ann_field,
         ")",
       ),
     ),
     arrow_ann: $ => seq(
-      choice($._paren_space, $._paren_no_space, $._paren_after_brace),
+      alias(choice($.paren_space, $.paren_no_space, $.paren_after_brace), "("),
       optional($.arrow_ann_args),
       "->",
       $.ann,
@@ -720,7 +724,11 @@ module.exports = grammar({
     comma_anns: $ => seq($.ann, repeat(seq(",", $.ann))),
 
     pred_ann: $ => seq(
-      $.ann, "%", choice($._paren_space, $._paren_no_space), $.id_expr, ")",
+      $.ann,
+      "%",
+      alias(choice($.paren_space, $.paren_no_space), "("),
+      $.id_expr,
+      ")",
     ),
 
     dot_ann: $ => seq($.name, ".", $.name),
