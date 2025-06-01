@@ -4402,7 +4402,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "filter"
+          "value": "sieve"
         },
         {
           "type": "SYMBOL",
@@ -4530,7 +4530,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "update"
+          "value": "transform"
         },
         {
           "type": "SYMBOL",

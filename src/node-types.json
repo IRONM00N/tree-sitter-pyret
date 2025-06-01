@@ -7788,10 +7788,6 @@
     "named": false
   },
   {
-    "type": "filter",
-    "named": false
-  },
-  {
     "type": "for",
     "named": false
   },
@@ -7989,6 +7985,10 @@
     "named": false
   },
   {
+    "type": "sieve",
+    "named": false
+  },
+  {
     "type": "source:",
     "named": false
   },
@@ -8013,6 +8013,10 @@
     "named": false
   },
   {
+    "type": "transform",
+    "named": false
+  },
+  {
     "type": "true",
     "named": false
   },
@@ -8022,10 +8026,6 @@
   },
   {
     "type": "type-let",
-    "named": false
-  },
-  {
-    "type": "update",
     "named": false
   },
   {

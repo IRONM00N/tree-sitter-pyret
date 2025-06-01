@@ -200,3 +200,212 @@ Block Comment
       (prim_expr
         (num_expr
           (number))))))
+
+=====
+Table
+=====
+
+t = table: name, score
+  row: "Alice", 85
+  row: "Bob", 92
+  row: "Charlie", 78
+end
+
+---
+
+(source_file
+  (block
+    (let_expr
+      (toplevel_binding
+        (binding
+          (name_binding
+            (name))))
+      (table_expr
+        (table_headers
+          (list_table_header
+            (table_header
+              (name)))
+          (table_header
+            (name)))
+        (table_rows
+          (table_row
+            (table_items
+              (list_table_item
+                (prim_expr
+                  (string_expr
+                    (string
+                      (string_content)))))
+              (prim_expr
+                (num_expr
+                  (number)))))
+          (table_row
+            (table_items
+              (list_table_item
+                (prim_expr
+                  (string_expr
+                    (string
+                      (string_content)))))
+              (prim_expr
+                (num_expr
+                  (number)))))
+          (table_row
+            (table_items
+              (list_table_item
+                (prim_expr
+                  (string_expr
+                    (string
+                      (string_content)))))
+              (prim_expr
+                (num_expr
+                  (number))))))))))
+
+============
+Table Select
+============
+
+select name from t end
+
+---
+
+(source_file
+  (block
+    (check_test
+      (table_select
+        (name)
+        (id_expr
+          (id_expr))))))
+
+===========
+Table Sieve
+===========
+
+sieve t using score: 
+  score >= 80 
+end
+
+---
+
+(source_file
+  (block
+    (check_test
+      (table_filter
+        (id_expr
+          (id_expr))
+        (binding
+          (name_binding
+            (name)))
+        (id_expr
+          (id_expr))
+        (binop)
+        (prim_expr
+          (num_expr
+            (number)))))))
+
+===========
+Table Order
+===========
+
+order t: 
+  score descending
+end
+
+---
+
+(source_file
+  (block
+    (check_test
+      (table_order
+        (id_expr
+          (id_expr))
+        (column_order
+          (name))))))
+
+===========
+Table Extend
+===========
+
+extend t using score: 
+  grade: if score >= 80: "B" else: "C" end 
+end
+
+---
+
+
+(source_file
+  (block
+    (check_test
+      (table_extend
+        (id_expr
+          (id_expr))
+        (binding
+          (name_binding
+            (name)))
+        (table_extend_fields
+          (table_extend_field
+            (key
+              (name))
+            (if_expr
+              (id_expr
+                (id_expr))
+              (binop)
+              (prim_expr
+                (num_expr
+                  (number)))
+              (block
+                (check_test
+                  (prim_expr
+                    (string_expr
+                      (string
+                        (string_content))))))
+              (block
+                (check_test
+                  (prim_expr
+                    (string_expr
+                      (string
+                        (string_content)))))))))))))
+
+===============
+Table Transform
+===============
+
+transform t using score: 
+  score: score + 5 
+end
+
+---
+
+(source_file
+  (block
+    (check_test
+      (table_update
+        (id_expr
+          (id_expr))
+        (binding
+          (name_binding
+            (name)))
+        (obj_fields
+          (obj_field
+            (key
+              (name))
+            (id_expr
+              (id_expr))
+            (binop)
+            (prim_expr
+              (num_expr
+                (number)))))))))
+
+=============
+Table Extract
+=============
+
+extract name from t end
+
+---
+
+(source_file
+  (block
+    (check_test
+      (table_extract
+        (name)
+        (id_expr
+          (id_expr))))))

@@ -616,9 +616,8 @@ module.exports = grammar({
     table_select: $ => seq(
       "select", $.name, repeat(seq(",", $.name)), "from", $._expr, "end",
     ),
-    // FIXME: can be incorrectly detected (see pyret-lang/src/arr/compiler/pyret.arr:255)
     table_filter: $ => seq(
-      "filter", 
+      "sieve", 
       $._expr, 
       optional(seq("using", $.binding, repeat(seq(",", $.binding)))),
       ":", 
@@ -637,7 +636,7 @@ module.exports = grammar({
       "extract", $.name, "from", $._expr, "end",
     ),
     table_update: $ => seq(
-      "update", 
+      "transform", 
       $._expr,
       optional(seq("using", $.binding, repeat(seq(",", $.binding)))),
       ":", 
