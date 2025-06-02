@@ -95,8 +95,6 @@ static inline bool handle_paren(Scanner* state, TSLexer* lexer,
       lexer->result_symbol = PAREN_NO_SPACE;
       advance(lexer);
       return true;
-    } else {
-      printf("UNUSED PAREN!!!!, prev %d\n", state->prev);
     }
   }
 
@@ -106,9 +104,9 @@ static inline bool handle_paren(Scanner* state, TSLexer* lexer,
 
 bool tree_sitter_pyret_external_scanner_scan(void* payload, TSLexer* lexer,
                                              const bool* valid_symbols) {
-  //   if (valid_symbols[ERROR_SENTINEL]) {
-  //     return false;
-  //   }
+  if (valid_symbols[ERROR_SENTINEL]) {
+    return false;
+  }
 
   Scanner* state = (Scanner*)payload;
 
