@@ -359,7 +359,7 @@ module.exports = grammar({
     check_op_postfix: $ => "does-not-raise",
 
     _expr: $ => choice(
-      $.prim_expr,
+      $.paren_expr,
       $.id_expr,
       $.prim_expr,
       $.lambda_expr,
@@ -452,18 +452,7 @@ module.exports = grammar({
       "end",
     ),
 
-    app_expr: $ => choice(
-      seq($._expr, $.app_args),
-      // TODO: maybe these should be removed? these seem like a hack
-      seq($._expr, alias($.paren_space, "("), ")"),
-      seq(
-        $._expr,
-        alias($.paren_space, "("),
-        $._binop_expr,
-        repeat1(seq(",", $._binop_expr)),
-        ")",
-      ),
-    ),
+    app_expr: $ => prec(PREC.Call, seq($._expr, $.app_args)),
 
     app_args: $ => seq(
       alias($.paren_no_space, "("),

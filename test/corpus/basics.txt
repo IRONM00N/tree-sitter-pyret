@@ -472,3 +472,36 @@ Single String
           (escape_sequence)
           (escape_sequence)
           (escape_sequence))))))
+
+==========
+Paren Expr
+==========
+
+if (val.foo > 1):
+  0
+else:
+  1
+end
+
+---
+
+(source_file
+  (block
+    (if_expr
+      (paren_expr
+        (dot_expr
+          (id_expr
+            (id_expr))
+          (name))
+        (binop)
+        (prim_expr
+          (num_expr
+            (number))))
+      (block
+        (prim_expr
+          (num_expr
+            (number))))
+      (block
+        (prim_expr
+          (num_expr
+            (number)))))))
