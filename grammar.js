@@ -44,10 +44,12 @@ module.exports = grammar({
     $.paren_no_space,
     $.paren_space,
     $.paren_after_brace,
+    $.langle,
+    $.rangle,
+    $.lt,
+    $.gt,
     $.error_sentinel
   ],
-
-  conflicts: $ => [[$.binop, $.inst_expr], [$._binop_expr, $.inst_expr]],
 
   word: $ => $.name,
 
@@ -260,7 +262,11 @@ module.exports = grammar({
       "end",
     ),
     fun_header: $ => seq(optional($.ty_params), $.args, optional($.return_ann)), // bad-arg choice elided
-    ty_params: $ => seq("<", $.comma_names, ">"),
+    ty_params: $ => seq(
+      alias(choice($.langle, $.lt), "<"),
+      $.comma_names, 
+      alias(choice($.rangle, $.gt), ">"),
+    ),
     args: $ => seq(
       alias(choice($.paren_no_space, $.paren_after_brace), "("),
       optional(seq($.binding, repeat(seq(",", $.binding)))),
@@ -338,14 +344,12 @@ module.exports = grammar({
       "end",
     ),
 
-    _binop_expr: $ => prec.left(PREC.Binary,
-      seq($._expr, repeat(seq($.binop, $._expr)))
-    ),
+    _binop_expr: $ => seq($._expr, repeat(seq($.binop, $._expr))),
 
-    // TODO: these might need the scanner support
+    // TODO: ops should be surrounded by ws, should we care if not ambiguous?
     binop: $ => choice(
       "+", "-", "*", "/", "<=", ">=", "==", "<=>", "=~", "<>",
-      "<", ">", "and", "or", "^"
+      alias($.lt, "<"), alias($.gt, ">"), "and", "or", "^"
     ),
 
     check_op: $ => choice(
@@ -452,7 +456,7 @@ module.exports = grammar({
       "end",
     ),
 
-    app_expr: $ => prec(PREC.Call, seq($._expr, $.app_args)),
+    app_expr: $ => seq($._expr, $.app_args),
 
     app_args: $ => seq(
       alias($.paren_no_space, "("),
@@ -464,9 +468,12 @@ module.exports = grammar({
     ),
     trailing_comma_binops: $ => seq($.comma_binops, optional(",")),
 
-    // TODO: is this correct?
-    inst_expr: $ => prec.dynamic(PREC.Call + 1,
-      seq($._expr, "<", $.ann, repeat(seq(",", $.ann)), ">")
+    inst_expr: $ => seq(
+      $._expr, 
+      alias($.langle, "<"),
+      $.ann, 
+      repeat(seq(",", $.ann)),
+      alias(choice($.rangle, $.gt), ">")
     ),
 
     tuple_expr: $ => seq("{", $.tuple_fields, "}"),
@@ -708,7 +715,12 @@ module.exports = grammar({
       ")",
     ),
 
-    app_ann: $ => seq(choice($.name_ann, $.dot_ann), "<", $.comma_anns, ">"),
+    app_ann: $ => seq(
+      choice($.name_ann, $.dot_ann), 
+      alias($.langle, "<"), 
+      $.comma_anns, 
+      alias(choice($.rangle, $.gt), ">")
+    ),
 
     comma_anns: $ => seq($.ann, repeat(seq(",", $.ann))),
 

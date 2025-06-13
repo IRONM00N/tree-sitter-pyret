@@ -26,6 +26,10 @@ enum TokenType {
   PAREN_NO_SPACE,
   PAREN_SPACE,
   PAREN_AFTER_BRACE,
+  LANGLE,
+  RANGLE,
+  LT,
+  GT,
   ERROR_SENTINEL
 };
 
@@ -69,11 +73,6 @@ static inline void skip(TSLexer* lexer) { lexer->advance(lexer, true); }
 
 static inline bool handle_paren(Scanner* state, TSLexer* lexer,
                                 const bool* valid_symbols) {
-  while (iswspace(lexer->lookahead)) {
-    skip(lexer);
-    state->prev = PREV_WHITESPACE;
-  }
-
   if (lexer->lookahead == '{') {
     advance(lexer);
     state->prev = PREV_BRACE;
@@ -95,10 +94,57 @@ static inline bool handle_paren(Scanner* state, TSLexer* lexer,
       lexer->result_symbol = PAREN_NO_SPACE;
       advance(lexer);
       return true;
+    } else {
+      lexer->log(lexer, "Invalid ( encountered.");
     }
   }
 
-  state->prev = NORMAL;
+  return false;
+}
+
+static inline bool handle_angle(Scanner* state, TSLexer* lexer,
+                                const bool* valid_symbols) {
+  if (lexer->lookahead == '<') {
+    advance(lexer);
+    lexer->mark_end(lexer);
+
+    // <- is handled as a "bad-op" in the official grammar, here we just ensure
+    // that tree-sitter handles it
+    if (lexer->lookahead == '>' || lexer->lookahead == '=' ||
+        lexer->lookahead == '-')
+      return false;
+
+    bool trailing_ws = (lexer->eof(lexer) || iswspace(lexer->lookahead) ||
+                        lexer->lookahead == '#');
+    if (state->prev == PREV_WHITESPACE && trailing_ws && valid_symbols[LT]) {
+      lexer->result_symbol = LT;
+    } else if (valid_symbols[LANGLE]) {
+      lexer->result_symbol = LANGLE;
+    } else {
+      lexer->log(lexer, "Invalid < encountered.");
+    }
+
+    state->prev = NORMAL;
+    return true;
+  } else if (lexer->lookahead == '>') {
+    advance(lexer);
+    lexer->mark_end(lexer);
+
+    if (lexer->lookahead == '=') return false;
+
+    bool trailing_ws = (lexer->eof(lexer) || iswspace(lexer->lookahead) ||
+                        lexer->lookahead == '#');
+    if (state->prev == PREV_WHITESPACE && trailing_ws && valid_symbols[GT]) {
+      lexer->result_symbol = GT;
+    } else if (valid_symbols[RANGLE]) {
+      lexer->result_symbol = RANGLE;
+    } else {
+      return false;
+    }
+    state->prev = NORMAL;
+    return true;
+  }
+
   return false;
 }
 
@@ -109,6 +155,22 @@ bool tree_sitter_pyret_external_scanner_scan(void* payload, TSLexer* lexer,
   }
 
   Scanner* state = (Scanner*)payload;
+
+  if (valid_symbols[PAREN_NO_SPACE] || valid_symbols[PAREN_SPACE] ||
+      valid_symbols[PAREN_AFTER_BRACE] || valid_symbols[LANGLE] ||
+      valid_symbols[RANGLE] || valid_symbols[LT] || valid_symbols[GT]) {
+    while (iswspace(lexer->lookahead)) {
+      skip(lexer);
+      state->prev = PREV_WHITESPACE;
+    }
+  }
+
+  if (((valid_symbols[LANGLE] || valid_symbols[LT]) &&
+       lexer->lookahead == '<') ||
+      ((valid_symbols[RANGLE] || valid_symbols[GT]) &&
+       lexer->lookahead == '>')) {
+    return handle_angle(state, lexer, valid_symbols);
+  }
 
   if (valid_symbols[PAREN_NO_SPACE] || valid_symbols[PAREN_SPACE] ||
       valid_symbols[PAREN_AFTER_BRACE]) {

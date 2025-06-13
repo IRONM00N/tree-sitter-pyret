@@ -505,3 +505,57 @@ end
         (prim_expr
           (num_expr
             (number)))))))
+
+===================
+Function Type Param
+===================
+
+fun f<a, b>(x :: a) -> b:
+  x
+end
+
+---
+
+(source_file
+  (block
+    (fun_expr
+      (name)
+      (fun_header
+        (ty_params
+          (comma_names
+            (name)
+            (name)))
+        (args
+          (binding
+            (name_binding
+              (name)
+              (ann
+                (name_ann
+                  (name))))))
+        (return_ann
+          (ann
+            (name_ann
+              (name)))))
+      (block
+        (id_expr
+          (id_expr))))))
+
+===============
+Type Type Param
+===============
+
+type Foo<a, b> = a
+
+---
+
+(source_file
+  (block
+    (type_expr
+      (name)
+      (ty_params
+        (comma_names
+          (name)
+          (name)))
+      (ann
+        (name_ann
+          (name))))))
